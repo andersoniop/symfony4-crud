@@ -15,7 +15,8 @@ class ToDoListController extends AbstractController
      */
     public function index()
     {
-        return $this->render('index.html.twig');
+        $tasks = $this->getDoctrine()->getRepository(Task::class)->findAll();
+        return $this->render('index.html.twig',['tasks'=>$tasks]);
     }
 
     /**
@@ -31,7 +32,7 @@ class ToDoListController extends AbstractController
 
         $task = new Task();
         $task->setTitle($title);
-        
+
         $entityManager->persist($task);
         $entityManager->flush();
 
