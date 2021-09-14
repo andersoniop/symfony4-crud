@@ -1,2 +1,2 @@
-# symfony4-crud
- To do list com symfony
+# App To-Do utilizando a framework Symfony
+ Meu primeiro To-Do list utilizando a framework de PHP Symfony.
